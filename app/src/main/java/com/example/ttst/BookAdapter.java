@@ -1,10 +1,32 @@
 package com.example.ttst;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
+
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {
-    private List<Book> bookList;
+
+    // 条目点击回调，供 Activity 处理点击事件
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    private final List<Book> bookList;
+    private OnItemClickListener listener;
 
     public BookAdapter(List<Book> bookList) {
         this.bookList = bookList;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 
     @NonNull
@@ -20,6 +42,12 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         holder.ivCover.setImageResource(book.getCoverRes());
         holder.tvName.setText(book.getBookName());
         holder.tvAuthor.setText(book.getAuthor());
+
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(position);
+            }
+        });
     }
 
     @Override
@@ -30,6 +58,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
     public static class BookViewHolder extends RecyclerView.ViewHolder {
         ImageView ivCover;
         TextView tvName, tvAuthor;
+
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
             ivCover = itemView.findViewById(R.id.iv_cover);

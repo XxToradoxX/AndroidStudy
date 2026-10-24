@@ -1,11 +1,14 @@
 package com.example.ttst;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,22 +17,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView listView = findViewById(R.id.listView);
-        // 数据源
-        String[] nameArray = {"张三", "李四", "王五", "赵六", "孙七"};
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Array适配器，使用系统自带条目布局 simple_list_item_1
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                nameArray
-        );
-        listView.setAdapter(adapter);
+        // 数据源：书名、封面图资源 id、作者
+        List<Book> bookList = new ArrayList<>();
+        bookList.add(new Book(R.drawable.cover_book_1, "红楼梦", "曹雪芹"));
+        bookList.add(new Book(R.drawable.cover_book_2, "西游记", "吴承恩"));
+        bookList.add(new Book(R.drawable.cover_book_3, "水浒传", "施耐庵"));
+        bookList.add(new Book(R.drawable.cover_book_4, "三国演义", "罗贯中"));
+        bookList.add(new Book(R.drawable.cover_book_5, "聊斋志异", "蒲松龄"));
+
+        BookAdapter adapter = new BookAdapter(bookList);
+        recyclerView.setAdapter(adapter);
 
         // 条目点击监听
-        listView.setOnItemClickListener((parent, view, position, id) -> {
-            String selectedName = nameArray[position];
-            Toast.makeText(MainActivity.this, selectedName, Toast.LENGTH_SHORT).show();
+        adapter.setOnItemClickListener(position -> {
+            Book book = bookList.get(position);
+            Toast.makeText(MainActivity.this,
+                    book.getBookName() + " · " + book.getAuthor(),
+                    Toast.LENGTH_SHORT).show();
         });
     }
 }

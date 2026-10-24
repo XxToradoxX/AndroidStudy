@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ttst</string>
+    <string name="book_cover_desc">图书封面</string>
 </resources>
