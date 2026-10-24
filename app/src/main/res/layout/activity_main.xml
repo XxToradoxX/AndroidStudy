@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/listView"
+    <!-- 顶部工具栏：承载选项菜单 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="?attr/actionBarSize"
+        app:title="调试辅助" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="实测电压数据（长按可操作）："
+        android:textSize="16sp" />
+
+    <!-- 实测电压 TextView：注册上下文菜单 -->
+    <TextView
+        android:id="@+id/tv_voltage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="2.874 V"
+        android:textColor="#1976D2"
+        android:textSize="48sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
