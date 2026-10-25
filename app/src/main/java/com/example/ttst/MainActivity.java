@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         bookList.add(new Book(R.drawable.cover_book_2, "西游记", "吴承恩"));
         bookList.add(new Book(R.drawable.cover_book_3, "水浒传", "施耐庵"));
         bookList.add(new Book(R.drawable.cover_book_4, "三国演义", "罗贯中"));
-        bookList.add(new Book(R.drawable.cover_book_5, "聊斋志异", "蒲松龄"));
+        bookList.add(new Book(R.drawable.cover_book_5, "野草", "鲁迅"));
 
         BookAdapter adapter = new BookAdapter(bookList);
         recyclerView.setAdapter(adapter);
