@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色模式下的分割线与器件类型标签配色 -->
+    <color name="divider">#33FFFFFF</color>
+    <color name="device_type_tag_bg">#1E3A5F</color>
+    <color name="device_type_tag_text">#9DC2FF</color>
+</resources>

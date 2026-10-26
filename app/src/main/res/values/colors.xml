@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- 列表页分割线颜色 -->
+    <color name="divider">#1F000000</color>
+
+    <!-- 器件类型标签的背景与文字颜色 -->
+    <color name="device_type_tag_bg">#E8F0FE</color>
+    <color name="device_type_tag_text">#1A56C4</color>
 </resources>

@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">ttst</string>
     <string name="book_cover_desc">图书封面</string>
+
+    <!-- 主页面 -->
+    <string name="home_hint">微电子器件演示\n点击右上角 ⋮ 菜单，选择「微电子器件列表」</string>
+
+    <!-- 右上角选项菜单 -->
+    <string name="menu_device_list">微电子器件列表</string>
+
+    <!-- 器件列表页 -->
+    <string name="title_device_list">微电子器件</string>
+    <string name="device_list_heading">微电子器件列表</string>
+    <string name="device_list_description">微电子器件是集成电路与电力电子系统的基础单元，通过对载流子的控制实现整流、放大、开关与光电转换。以下为常见器件的类型与典型用途。</string>
+    <string name="device_count">共 %1$d 种器件</string>
+    <string name="device_count_placeholder">共 0 种器件</string>
 </resources>

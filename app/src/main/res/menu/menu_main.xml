@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 右上角选项菜单项：点击跳转到微电子器件列表 -->
+    <item
+        android:id="@+id/action_device_list"
+        android:orderInCategory="100"
+        android:title="@string/menu_device_list"
+        app:showAsAction="never" />
+</menu>

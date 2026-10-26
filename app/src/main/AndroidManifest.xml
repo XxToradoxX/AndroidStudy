@@ -21,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 微电子器件信息展示页面，由主页面右上角菜单通过 Intent 打开 -->
+        <activity
+            android:name=".DeviceListActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
