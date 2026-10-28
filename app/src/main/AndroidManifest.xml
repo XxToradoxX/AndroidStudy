@@ -21,6 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 第二个页面：接收并展示 Intent 传递的芯片型号与工艺节点 -->
+        <activity
+            android:name=".ChipDetailActivity"
+            android:exported="false"
+            android:label="@string/title_detail"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

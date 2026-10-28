@@ -1,4 +1,34 @@
 <resources>
     <string name="app_name">ttst</string>
-    <string name="book_cover_desc">图书封面</string>
+
+    <!-- 第一个页面：芯片型号输入与工艺节点选择 -->
+    <string name="title_main">芯片参数录入</string>
+    <string name="main_heading">芯片型号与工艺节点</string>
+    <string name="main_description">输入芯片型号并选择工艺节点，点击下方按钮后通过 Intent 将两项数据传递到第二个页面。</string>
+    <string name="hint_chip_model">芯片型号</string>
+    <string name="label_process_node">工艺节点（单位：nm）</string>
+    <string name="process_node_hint">请选择一个工艺节点</string>
+    <string name="node_2nm">2 nm</string>
+    <string name="node_3nm">3 nm</string>
+    <string name="node_4nm">4 nm</string>
+    <string name="node_5nm">5 nm</string>
+    <string name="node_7nm">7 nm</string>
+    <string name="action_pass_data">传递数据并查看详情</string>
+    <string name="toast_chip_model_empty">请输入芯片型号</string>
+    <string name="error_chip_model_empty">芯片型号不能为空</string>
+    <string name="toast_process_node_empty">请选择工艺节点</string>
+    <string name="main_footnote">提示：芯片型号为空时不会跳转，并会提示「请输入芯片型号」。</string>
+
+    <!-- 第二个页面：接收并展示 Intent 数据 -->
+    <string name="title_detail">芯片参数详情</string>
+    <string name="detail_heading">接收到的数据</string>
+    <string name="detail_description">以下内容由第二个 Activity 从 Intent 中取出，并展示在文本控件上。</string>
+    <string name="label_chip_model_value">芯片型号（String）</string>
+    <string name="label_process_node_value">工艺节点（int，单位 nm）</string>
+    <string name="value_process_node">%1$d nm</string>
+    <string name="value_not_received">未接收到数据</string>
+    <string name="summary_title">数据传递结果</string>
+    <string name="chip_summary">芯片「%1$s」采用 %2$s 工艺节点。</string>
+    <string name="summary_incomplete">部分数据缺失，请返回上一页重新填写。</string>
+    <string name="detail_footnote">数据来源：putExtra() → getStringExtra() / getIntExtra()</string>
 </resources>
