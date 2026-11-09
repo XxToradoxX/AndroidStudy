@@ -1,4 +1,61 @@
 <resources>
-    <string name="app_name">ttst</string>
-    <string name="book_cover_desc">图书封面</string>
+    <string name="app_name">微电子器件参数登记</string>
+
+    <!-- 录入页：标题与说明 -->
+    <string name="title_main">器件参数录入</string>
+    <string name="main_heading">微电子器件参数登记</string>
+    <string name="main_description">填写器件型号、晶圆批次、阈值电压、漏电流与测试日期，完成校验后提交并查看参数列表。</string>
+
+    <!-- 录入页：输入框 -->
+    <string name="hint_device_model">器件型号</string>
+    <string name="hint_wafer_lot">晶圆批次</string>
+    <string name="hint_threshold_voltage">阈值电压（V）</string>
+    <string name="hint_leakage_current">漏电流（nA）</string>
+    <string name="hint_test_date">测试日期（yyyy-MM-dd）</string>
+    <string name="helper_threshold_voltage">必须为大于 0 的数值，单位 V</string>
+    <string name="helper_leakage_current">必须为大于 0 的数值，单位 nA</string>
+    <string name="action_submit">提交保存</string>
+    <string name="action_pick_date">选择测试日期</string>
+    <string name="main_footnote">校验规则：所有字段必填；阈值电压与漏电流必须为合法正数；测试日期格式为 yyyy-MM-dd。</string>
+
+    <!-- 校验失败提示：Toast 文案与输入框错误文案 -->
+    <string name="error_device_model_empty">器件型号不能为空</string>
+    <string name="toast_device_model_empty">请输入器件型号</string>
+
+    <string name="error_wafer_lot_empty">晶圆批次不能为空</string>
+    <string name="toast_wafer_lot_empty">请输入晶圆批次</string>
+
+    <string name="error_threshold_voltage_empty">阈值电压不能为空</string>
+    <string name="toast_threshold_voltage_empty">请输入阈值电压</string>
+    <string name="error_threshold_voltage_invalid">请输入大于 0 的合法数值</string>
+    <string name="toast_threshold_voltage_invalid">阈值电压必须为大于 0 的合法数值</string>
+
+    <string name="error_leakage_current_empty">漏电流不能为空</string>
+    <string name="toast_leakage_current_empty">请输入漏电流</string>
+    <string name="error_leakage_current_invalid">请输入大于 0 的合法数值</string>
+    <string name="toast_leakage_current_invalid">漏电流必须为大于 0 的合法数值</string>
+
+    <string name="error_test_date_empty">测试日期不能为空</string>
+    <string name="toast_test_date_empty">请选择或输入测试日期</string>
+    <string name="error_test_date_invalid">日期格式应为 yyyy-MM-dd</string>
+    <string name="toast_test_date_invalid">请输入有效的测试日期（yyyy-MM-dd）</string>
+
+    <!-- 参数列表页 -->
+    <string name="title_parameter_list">器件参数列表</string>
+    <string name="list_heading">本次登记的器件参数</string>
+    <string name="list_heading_with_model">「%1$s」的器件参数</string>
+    <string name="list_description">以下数据由录入页面通过 Intent 传递，并按参数逐项列出。</string>
+    <string name="list_success_icon">✓</string>
+    <string name="list_success_title">登记成功</string>
+    <string name="list_success_message">器件参数已提交并传递至参数列表页面</string>
+    <string name="label_device_model">器件型号</string>
+    <string name="label_wafer_lot">晶圆批次</string>
+    <string name="label_threshold_voltage">阈值电压</string>
+    <string name="label_leakage_current">漏电流</string>
+    <string name="label_test_date">测试日期</string>
+    <string name="value_voltage">%1$.3f V</string>
+    <string name="value_current">%1$.3f nA</string>
+    <string name="action_back_to_form">返回继续录入</string>
+    <string name="list_footnote">提示：点击左上角返回箭头或下方按钮，可回到录入页面继续登记。</string>
+    <string name="toast_parameter_missing">未接收到完整的器件参数</string>
 </resources>
