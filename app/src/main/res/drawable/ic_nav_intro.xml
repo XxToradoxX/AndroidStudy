@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 底部导航：器件介绍（二极管符号） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M2,11h5v2H2z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M7,5l7,7l-7,7z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M14,5h2v14h-2z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M16,11h6v2h-6z" />
+</vector>

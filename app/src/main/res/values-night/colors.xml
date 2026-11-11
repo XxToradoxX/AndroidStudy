@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 品牌色：深色主题下的低饱和版本，保证对比度 -->
+    <color name="brand_primary">#A8C7FA</color>
+    <color name="brand_on_primary">#062E6F</color>
+    <color name="brand_primary_container">#1B3B6F</color>
+    <color name="brand_on_primary_container">#D6E3FF</color>
+    <color name="brand_secondary">#7FD4DC</color>
+    <color name="brand_on_secondary">#00363B</color>
+    <color name="brand_secondary_container">#0B4A50</color>
+    <color name="brand_on_secondary_container">#C3F0F4</color>
+
+    <color name="hero_start">#0B1524</color>
+    <color name="hero_end">#1C3F70</color>
+</resources>
