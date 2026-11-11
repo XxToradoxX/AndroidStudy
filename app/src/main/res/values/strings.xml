@@ -1,53 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">二极管器件展示</string>
+    <string name="app_name">三极管器件展示</string>
 
     <!-- 主界面：标题与底部导航 -->
-    <string name="title_intro">器件介绍</string>
+    <string name="title_intro">三极管</string>
     <string name="title_parameter">参数参考</string>
-    <string name="nav_intro">器件介绍</string>
-    <string name="nav_parameter">参数参考</string>
+    <string name="nav_intro">三极管</string>
+    <string name="nav_parameter">参数</string>
 
     <!-- 器件介绍页 -->
-    <string name="intro_image_desc">二极管电路符号示意图</string>
-    <string name="intro_heading">二极管 Diode</string>
-    <string name="intro_subtitle">PN 结 · 单向导电 · 两端器件</string>
+    <string name="intro_image_desc">三极管电路符号</string>
+    <string name="intro_heading">三极管 Transistor</string>
+    <string name="intro_subtitle">电流放大 · 三端器件 · NPN / PNP</string>
+
     <string name="section_intro">基本介绍</string>
-    <string name="intro_body">二极管是由 P 型半导体与 N 型半导体结合形成的 PN 结构成的两端器件，具有单向导电性：阳极电位高于阴极时导通，反之截止。它是整流、检波、限幅、稳压与开关电路中最基础的分立器件。</string>
+    <string name="intro_body">三极管全称双极型晶体管（BJT），由两个 PN 结、三个掺杂区组成：发射区、基区与集电区，分别引出射极 E、基极 B、集电极 C 三个电极。按结构分为 NPN 与 PNP 两种类型，是放大与开关电路中最常用的器件。</string>
+
+    <string name="section_electrodes">三个电极</string>
+    <string name="electrode_e_title">发射极 E</string>
+    <string name="electrode_e_note">发射载流子，掺杂浓度最高</string>
+    <string name="electrode_b_title">基极 B</string>
+    <string name="electrode_b_note">控制载流子，基区很薄</string>
+    <string name="electrode_c_title">集电极 C</string>
+    <string name="electrode_c_note">收集载流子，面积最大</string>
+
     <string name="section_features">核心特性</string>
-    <string name="feature_one_way">单向导电性：正向导通、反向截止，是整流与检波的基础。</string>
-    <string name="feature_nonlinear">非线性伏安特性：正向电流随电压近似指数增长，导通后压降变化很小。</string>
-    <string name="feature_breakdown">反向击穿特性：反向电压超过击穿值时电流骤增，可用于稳压，也需避免损坏。</string>
-    <string name="feature_switch">高频与开关特性：肖特基、快恢复二极管反向恢复时间短，适合高频电路。</string>
+    <string name="feature_amplify">电流放大：共发射极电路中，集电极电流约等于基极电流的 β 倍，即 I_C ≈ β · I_B。</string>
+    <string name="feature_control">以小控大：用微小的基极电流控制较大的集电极电流，实现信号放大与功率控制。</string>
+    <string name="feature_states">三种工作状态：截止、放大、饱和，分别对应开关断开、信号放大与开关闭合。</string>
+    <string name="feature_switch">开关应用：数字电路中三极管多工作在截止与饱和两种状态，用作电子开关。</string>
+
     <string name="section_types">常见类型</string>
-    <string name="type_silicon_title">硅整流二极管</string>
-    <string name="type_silicon_note">1N4007 · 通用整流</string>
-    <string name="type_schottky_title">肖特基二极管</string>
-    <string name="type_schottky_note">1N5819 · 低压降</string>
-    <string name="type_zener_title">稳压二极管</string>
-    <string name="type_zener_note">1N4733 · 反向稳压</string>
-    <string name="type_led_title">发光二极管</string>
-    <string name="type_led_note">LED · 电致发光</string>
+    <string name="type_npn_title">NPN 小信号管</string>
+    <string name="type_npn_note">9014 · 2N3904</string>
+    <string name="type_pnp_title">PNP 小信号管</string>
+    <string name="type_pnp_note">9015 · 2N3906</string>
+    <string name="type_power_title">功率三极管</string>
+    <string name="type_power_note">TIP41C · 2N3055</string>
+    <string name="type_darlington_title">达林顿管</string>
+    <string name="type_darlington_note">TIP122 · 超高 β</string>
+
+    <string name="section_states">工作状态</string>
+    <string name="state_cutoff_title">截止</string>
+    <string name="state_cutoff_note">发射结反偏，I_C ≈ 0，相当于开关断开</string>
+    <string name="state_active_title">放大</string>
+    <string name="state_active_note">发射结正偏、集电结反偏，I_C = β · I_B</string>
+    <string name="state_saturation_title">饱和</string>
+    <string name="state_saturation_note">两个结均正偏，U_CE ≈ 0.3 V，相当于开关闭合</string>
+
     <string name="section_symbol">符号识读</string>
-    <string name="symbol_text">三角形指向阴极 K，箭头方向即正向电流方向；竖线一端为阴极（负极），另一端为阳极 A（正极）。</string>
+    <string name="symbol_text">带箭头的电极是发射极 E，箭头方向即发射极电流方向：NPN 箭头朝外，PNP 箭头朝内；中间竖线为基极 B，另一侧为集电极 C。</string>
     <string name="action_open_parameters">查看参数参考值</string>
     <string name="intro_footnote">以上内容为教学演示用的通用描述，具体参数请以器件手册为准。</string>
 
     <!-- 参数页 -->
-    <string name="parameter_heading">二极管关键参数参考值</string>
-    <string name="parameter_subtitle">常用二极管的正向压降与最大整流电流参考值，实际数值随型号、温度与工作电流变化。</string>
-    <string name="parameter_summary_voltage_value">0.7 V</string>
-    <string name="parameter_summary_voltage_label">正向压降 V_F</string>
-    <string name="parameter_summary_voltage_note">硅管典型值</string>
-    <string name="parameter_summary_current_value">1 A</string>
-    <string name="parameter_summary_current_label">最大整流电流 I_F</string>
-    <string name="parameter_summary_current_note">1N4007 参考值</string>
-    <string name="section_forward_voltage">正向压降 V_F</string>
-    <string name="section_forward_voltage_desc">正向导通时阳极与阴极之间的电压差，是估算功耗与压降的关键参数。</string>
-    <string name="section_max_current">最大整流电流 I_F(max)</string>
-    <string name="section_max_current_desc">允许长期通过的最大平均整流电流，选型时应留出 30%% ~ 50%% 余量。</string>
-    <string name="parameter_tips_title">参考提示</string>
-    <string name="parameter_tip_1">正向压降随正向电流增大和温度升高而变化，大电流时可达 1 V 以上。</string>
-    <string name="parameter_tip_2">最大整流电流指电阻性负载下的平均电流，容性负载需降额使用。</string>
-    <string name="parameter_tip_3">本页数据为常见器件的典型参考值，设计与维修时请查阅具体型号手册。</string>
-    <string name="parameter_footnote">单位说明：V 为伏特，A 为安培，mA 为毫安（1 A = 1000 mA）。</string>
+    <string name="parameter_heading">三极管关键参数参考值</string>
+    <string name="parameter_subtitle">常用三极管的电流放大倍数与极限参数参考值，实际数值随型号、温度与工作电流变化。</string>
+
+    <string name="parameter_summary_gain_value">100</string>
+    <string name="parameter_summary_gain_label">电流放大倍数 hFE</string>
+    <string name="parameter_summary_gain_note">小信号管典型值</string>
+    <string name="parameter_summary_vbe_value">0.7 V</string>
+    <string name="parameter_summary_vbe_label">发射结压降 V_BE</string>
+    <string name="parameter_summary_vbe_note">硅管导通时</string>
+
+    <string name="section_current_gain">电流放大与导通参数</string>
+    <string name="section_current_gain_desc">共发射极组态下 hFE = I_C / I_B，是选管与设计偏置时的首要参数。</string>
+    <string name="section_limits">极限参数</string>
+    <string name="section_limits_desc" formatted="false">超过极限值会损坏器件，选型时应留出 30% ~ 50% 余量。</string>
+
+    <string name="section_tips">选型提示</string>
+    <string name="parameter_tip_1">hFE 随集电极电流、温度与 U_CE 变化，手册一般会标注测试条件。</string>
+    <string name="parameter_tip_2">功率管通常需要加散热器，实际允许功耗随壳温升高而下降。</string>
+    <string name="parameter_tip_3">放大电路中要保证发射结正偏、集电结反偏，三极管才工作在放大区。</string>
+    <string name="parameter_footnote">数值为常见型号的典型参考值，实际以器件手册为准。</string>
 </resources>

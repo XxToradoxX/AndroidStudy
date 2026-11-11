@@ -8,15 +8,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 /**
- * 器件介绍页 Fragment。
+ * 三极管介绍页 Fragment。
  *
- * <p>以图文结合的方式展示二极管的基础信息：电路符号、基本介绍、核心特性、
- * 常见类型与符号识读。页面底部的按钮通过宿主 Activity 切换到参数页。</p>
+ * <p>以图文结合的方式展示三极管的基础信息：电路符号、基本介绍、三个电极、
+ * 核心特性、常见类型与工作状态。页面底部的按钮通过宿主 Activity 切换到参数页。</p>
  */
-public class DeviceIntroFragment extends Fragment {
+public class TransistorIntroFragment extends Fragment {
 
     /** 由 Fragment 自己提供布局资源，省去重写 onCreateView。 */
-    public DeviceIntroFragment() {
+    public TransistorIntroFragment() {
         super(R.layout.fragment_device_intro);
     }
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 三极管电路符号：NPN 型，箭头在发射极上指向外，用于介绍页头图 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="120dp"
+    android:viewportWidth="240"
+    android:viewportHeight="120">
+
+    <!-- 符号外圈柔光 -->
+    <path
+        android:fillColor="#228AB4F8"
+        android:pathData="M120,10 A50,50 0 1,1 119.9,10 Z" />
+
+    <!-- 外圈描边 -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M120,12 A48,48 0 1,1 119.9,12 Z"
+        android:strokeWidth="3"
+        android:strokeColor="#66D0E4FF" />
+
+    <!-- 基极引脚（左侧 B） -->
+    <path
+        android:pathData="M34,60 L92,60"
+        android:strokeWidth="6"
+        android:strokeColor="#8AB4F8"
+        android:strokeLineCap="round" />
+
+    <!-- 基极竖线 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M92,30 L100,30 L100,90 L92,90 Z" />
+
+    <!-- 集电极引线（右上 C） -->
+    <path
+        android:pathData="M96,46 L152,22 L200,22"
+        android:strokeWidth="6"
+        android:strokeColor="#8AB4F8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- 发射极引线（右下 E） -->
+    <path
+        android:pathData="M96,74 L152,98 L200,98"
+        android:strokeWidth="6"
+        android:strokeColor="#8AB4F8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- NPN 箭头：沿发射极引线指向外 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M147,92 L129,76 L136,96 Z" />
+</vector>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 参数页：关键参数速览 + 正向压降参考值 + 最大整流电流参考值 -->
+<!-- 参数页：关键参数速览 + 电流放大与导通参数 + 极限参数 -->
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -57,14 +57,14 @@
                         style="@style/TextAppearance.Lesson.SummaryValue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/parameter_summary_voltage_value"
+                        android:text="@string/parameter_summary_gain_value"
                         android:textColor="?attr/colorOnPrimaryContainer" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="@string/parameter_summary_voltage_label"
+                        android:text="@string/parameter_summary_gain_label"
                         android:textColor="?attr/colorOnPrimaryContainer"
                         android:textSize="13sp"
                         android:textStyle="bold" />
@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:alpha="0.75"
-                        android:text="@string/parameter_summary_voltage_note"
+                        android:text="@string/parameter_summary_gain_note"
                         android:textColor="?attr/colorOnPrimaryContainer"
                         android:textSize="11sp" />
                 </LinearLayout>
@@ -100,14 +100,14 @@
                         style="@style/TextAppearance.Lesson.SummaryValue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/parameter_summary_current_value"
+                        android:text="@string/parameter_summary_vbe_value"
                         android:textColor="?attr/colorOnSecondaryContainer" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="@string/parameter_summary_current_label"
+                        android:text="@string/parameter_summary_vbe_label"
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textSize="13sp"
                         android:textStyle="bold" />
@@ -117,66 +117,66 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:alpha="0.75"
-                        android:text="@string/parameter_summary_current_note"
+                        android:text="@string/parameter_summary_vbe_note"
                         android:textColor="?attr/colorOnSecondaryContainer"
                         android:textSize="11sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
 
-        <!-- 正向压降参考值 -->
+        <!-- 电流放大与导通参数 -->
+        <TextView
+            style="@style/TextAppearance.Lesson.SectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/section_current_gain" />
+
+        <TextView
+            style="@style/TextAppearance.Lesson.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/section_current_gain_desc" />
+
+        <LinearLayout
+            android:id="@+id/container_current_gain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <!-- 极限参数 -->
         <TextView
             style="@style/TextAppearance.Lesson.SectionTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/section_forward_voltage" />
+            android:text="@string/section_limits" />
 
         <TextView
             style="@style/TextAppearance.Lesson.Caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/section_forward_voltage_desc" />
+            android:layout_marginTop="6dp"
+            android:text="@string/section_limits_desc" />
 
         <LinearLayout
-            android:id="@+id/container_forward_voltage"
+            android:id="@+id/container_limits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="12dp"
             android:orientation="vertical" />
 
-        <!-- 最大整流电流参考值 -->
-        <TextView
-            style="@style/TextAppearance.Lesson.SectionTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:text="@string/section_max_current" />
-
-        <TextView
-            style="@style/TextAppearance.Lesson.Caption"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/section_max_current_desc" />
-
-        <LinearLayout
-            android:id="@+id/container_max_current"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical" />
-
-        <!-- 参考提示 -->
+        <!-- 选型提示 -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
+            app:cardBackgroundColor="?attr/colorSurfaceVariant"
             app:cardCornerRadius="18dp"
             app:cardElevation="0dp"
-            app:strokeColor="?attr/colorOutlineVariant"
-            app:strokeWidth="1dp">
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -185,32 +185,34 @@
                 android:padding="16dp">
 
                 <TextView
+                    style="@style/TextAppearance.Lesson.SectionTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/parameter_tips_title"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:text="@string/section_tips"
+                    android:textSize="15sp" />
 
                 <TextView
-                    style="@style/TextAppearance.Lesson.Bullet"
+                    style="@style/TextAppearance.Lesson.Caption"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="3dp"
                     android:text="@string/parameter_tip_1" />
 
                 <TextView
-                    style="@style/TextAppearance.Lesson.Bullet"
+                    style="@style/TextAppearance.Lesson.Caption"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="3dp"
                     android:text="@string/parameter_tip_2" />
 
                 <TextView
-                    style="@style/TextAppearance.Lesson.Bullet"
+                    style="@style/TextAppearance.Lesson.Caption"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="3dp"
                     android:text="@string/parameter_tip_3" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -219,7 +221,7 @@
             style="@style/TextAppearance.Lesson.Caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="14dp"
             android:lineSpacingExtra="3dp"
             android:text="@string/parameter_footnote" />
     </LinearLayout>

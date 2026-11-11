@@ -21,7 +21,7 @@ import java.util.List;
  * 单 Activity 宿主页。
  *
  * <p>只负责三件事：托管 {@link Fragment} 容器、维护底部导航的选中状态、
- * 在「器件介绍」与「参数参考」两个 Fragment 之间切换。页面内容全部由 Fragment
+ * 在「三极管介绍」与「参数参考」两个 Fragment 之间切换。页面内容全部由 Fragment
  * 承担，Activity 不再持有业务布局。</p>
  */
 public class MainActivity extends AppCompatActivity {
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     private void selectTab(int itemId) {
         boolean parameterTab = itemId == R.id.nav_parameters;
         showFragment(parameterTab ? TAG_PARAMETER : TAG_INTRO,
-                parameterTab ? new DeviceParameterFragment() : new DeviceIntroFragment());
+                parameterTab ? new TransistorParameterFragment() : new TransistorIntroFragment());
         toolbar.setTitle(parameterTab ? R.string.title_parameter : R.string.title_intro);
     }
 
